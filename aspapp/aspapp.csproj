@@ -1,0 +1,396 @@
+﻿<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{8A45B01A-0E40-4322-A472-670FEF42119B}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>aspapp</RootNamespace>
+    <AssemblyName>aspapp</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort>44386</IISExpressSSLPort>
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>true</UseVSHostingProcess>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.ComponentModel.Composition" />
+    <Reference Include="System.IdentityModel" />
+    <Reference Include="System.IO.Compression.FileSystem" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.WebPages, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Bin\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="admin.aspx" />
+    <Content Include="advanced.aspx" />
+    <Content Include="App_Data\Database1.mdf" />
+    <Content Include="App_Data\Database1_log.ldf">
+      <DependentUpon>Database1.mdf</DependentUpon>
+    </Content>
+    <Content Include="css\bootstrap.css" />
+    <Content Include="css\breadcrumb.css" />
+    <Content Include="css\flaticon.css" />
+    <Content Include="css\my.css" />
+    <Content Include="css\style.css" />
+    <Content Include="css\themify-icons.css" />
+    <Content Include="fonts\flaticon.css" />
+    <Content Include="fonts\themify.svg" />
+    <Content Include="images\signin-image.jpg" />
+    <Content Include="images\signup-image.jpg" />
+    <Content Include="img\about.png" />
+    <Content Include="img\banner\banner-2.jpg" />
+    <Content Include="img\banner\banner.jpg" />
+    <Content Include="img\banner\home-banner.jpg" />
+    <Content Include="img\banner\home-banner2.jpg" />
+    <Content Include="img\blog\add.jpg" />
+    <Content Include="img\blog\author.png" />
+    <Content Include="img\blog\c1.jpg" />
+    <Content Include="img\blog\c2.jpg" />
+    <Content Include="img\blog\c3.jpg" />
+    <Content Include="img\blog\c4.jpg" />
+    <Content Include="img\blog\c5.jpg" />
+    <Content Include="img\blog\c6.jpg" />
+    <Content Include="img\blog\cat-post\cat-post-1.jpg" />
+    <Content Include="img\blog\cat-post\cat-post-2.jpg" />
+    <Content Include="img\blog\cat-post\cat-post-3.jpg" />
+    <Content Include="img\blog\causes\causes-1.jpg" />
+    <Content Include="img\blog\causes\causes-2.jpg" />
+    <Content Include="img\blog\causes\causes-3.jpg" />
+    <Content Include="img\blog\feature-img1.jpg" />
+    <Content Include="img\blog\main-blog\m-blog-1.jpg" />
+    <Content Include="img\blog\main-blog\m-blog-2.jpg" />
+    <Content Include="img\blog\main-blog\m-blog-3.jpg" />
+    <Content Include="img\blog\main-blog\m-blog-4.jpg" />
+    <Content Include="img\blog\main-blog\m-blog-5.jpg" />
+    <Content Include="img\blog\next.jpg" />
+    <Content Include="img\blog\popular-post\post1.jpg" />
+    <Content Include="img\blog\popular-post\post2.jpg" />
+    <Content Include="img\blog\popular-post\post3.jpg" />
+    <Content Include="img\blog\popular-post\post4.jpg" />
+    <Content Include="img\blog\post-img1.jpg" />
+    <Content Include="img\blog\post-img2.jpg" />
+    <Content Include="img\blog\prev.jpg" />
+    <Content Include="img\blog\student.png" />
+    <Content Include="img\favicon.png" />
+    <Content Include="img\features\f1.png" />
+    <Content Include="img\features\f2.png" />
+    <Content Include="img\features\f3.png" />
+    <Content Include="img\home\book-footer.jpg" />
+    <Content Include="img\home\bookheart.jpg" />
+    <Content Include="img\home\books.jpg" />
+    <Content Include="img\home\books.png" />
+    <Content Include="img\home\reg.jpg" />
+    <Content Include="img\logo.png" />
+    <Content Include="img\logo2.png" />
+    <Content Include="img\next.png" />
+    <Content Include="img\prev.png" />
+    <Content Include="img\rey-seven-nm-mZ4Cs2I-unsplash_397351.jpg" />
+    <Content Include="img\testimonials\4686-6.jpg" />
+    <Content Include="img\testimonials\4e9d4caf8ec18d05fd6589d0d099e459_400x400.jpg" />
+    <Content Include="img\testimonials\f29ed1da64fa965a7519661d0f3af8f6.jpg" />
+    <Content Include="img\testimonials\t1.jpg" />
+    <Content Include="img\testimonials\t2.jpg" />
+    <Content Include="img\trainer\t1.jpg" />
+    <Content Include="img\trainer\t2.jpg" />
+    <Content Include="img\trainer\t3.jpg" />
+    <Content Include="img\trainer\t4.jpg" />
+    <Content Include="img\web-3967926_1920.jpg" />
+    <Content Include="index.aspx" />
+    <Content Include="js\bootstrap.min.js" />
+    <Content Include="js\contact.js" />
+    <Content Include="js\gmaps.min.js" />
+    <Content Include="js\jquery-3.2.1.min.js" />
+    <Content Include="js\jquery.ajaxchimp.min.js" />
+    <Content Include="js\jquery.form.js" />
+    <Content Include="js\jquery.validate.min.js" />
+    <Content Include="js\mail-script.js" />
+    <Content Include="js\main.js" />
+    <Content Include="js\my.js" />
+    <Content Include="js\owl-carousel-thumb.min.js" />
+    <Content Include="js\popper.js" />
+    <Content Include="js\stellar.js" />
+    <Content Include="js\theme.js" />
+    <Content Include="lesson.aspx" />
+    <Content Include="lessons.aspx" />
+    <Content Include="login.aspx" />
+    <Content Include="login\css\style.css" />
+    <Content Include="login\fonts\material-icon\css\material-design-iconic-font.css" />
+    <Content Include="login\fonts\material-icon\css\material-design-iconic-font.min.css" />
+    <Content Include="login\fonts\material-icon\fonts\Material-Design-Iconic-Font.svg" />
+    <Content Include="login\fonts\poppins\poppins-v5-latin-300.svg" />
+    <Content Include="login\fonts\poppins\poppins-v5-latin-300italic.svg" />
+    <Content Include="login\fonts\poppins\poppins-v5-latin-500.svg" />
+    <Content Include="login\fonts\poppins\poppins-v5-latin-500italic.svg" />
+    <Content Include="login\fonts\poppins\poppins-v5-latin-600.svg" />
+    <Content Include="login\fonts\poppins\poppins-v5-latin-700.svg" />
+    <Content Include="login\fonts\poppins\poppins-v5-latin-700italic.svg" />
+    <Content Include="login\fonts\poppins\poppins-v5-latin-800.svg" />
+    <Content Include="login\fonts\poppins\poppins-v5-latin-800italic.svg" />
+    <Content Include="login\fonts\poppins\poppins-v5-latin-900.svg" />
+    <Content Include="login\fonts\poppins\poppins-v5-latin-italic.svg" />
+    <Content Include="login\fonts\poppins\poppins-v5-latin-regular.svg" />
+    <Content Include="login\fonts\poppins\roboto-condensed-v16-latin-700.svg" />
+    <Content Include="login\fonts\poppins\roboto-condensed-v16-latin-700italic.svg" />
+    <Content Include="login\fonts\poppins\roboto-condensed-v16-latin-italic.svg" />
+    <Content Include="login\fonts\poppins\roboto-condensed-v16-latin-regular.svg" />
+    <Content Include="login\js\main.js" />
+    <Content Include="login\vendor\jquery\jquery-ui.min.js" />
+    <Content Include="login\vendor\jquery\jquery.min.js" />
+    <Content Include="manager.aspx" />
+    <Content Include="pics\09-03-2020-11-37-3171200309_1344606745706157_5230171337800024064_n.jpg" />
+    <Content Include="pics\09-03-2020-11-37-3173307609_2502653803149095_8629617637388713984_n.jpg" />
+    <Content Include="pics\09-03-2020-11-37-3180602128_2486035958305602_4598977888803356672_o.jpg" />
+    <Content Include="pics\09-03-2020-11-37-3187027313_857643581330603_318313310640406528_o.jpg" />
+    <Content Include="pics\21-01-2020-09-49-2173307609_2502653803149095_8629617637388713984_n.jpg" />
+    <Content Include="pics\21-01-2020-09-49-2180602128_2486035958305602_4598977888803356672_o.jpg" />
+    <Content Include="signup.aspx" />
+    <Content Include="swf\09-03-2020-11-37-31Food Chains Final.swf" />
+    <Content Include="swf\12-03-2020-20-36-20springs &amp; magnits.swf" />
+    <Content Include="swf\springs &amp; magnits.swf" />
+    <Content Include="txt\09-03-2020-12-19-50jjf.txt" />
+    <Content Include="txt\21-01-2020-09-49-21session.txt" />
+    <Content Include="Video\09-03-2020-11-37-31video_2020-03-02_20-02-57.mp4" />
+    <Content Include="Video\21-01-2020-09-49-21SYRIAN Hardcore Memes_2.mp4" />
+    <Content Include="Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="admin.aspx.cs">
+      <DependentUpon>admin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin.aspx.designer.cs">
+      <DependentUpon>admin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="advanced.aspx.cs">
+      <DependentUpon>advanced.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="advanced.aspx.designer.cs">
+      <DependentUpon>advanced.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="index.aspx.cs">
+      <DependentUpon>index.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="index.aspx.designer.cs">
+      <DependentUpon>index.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="lesson.aspx.cs">
+      <DependentUpon>lesson.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="lesson.aspx.designer.cs">
+      <DependentUpon>lesson.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="lessons.aspx.cs">
+      <DependentUpon>lessons.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="lessons.aspx.designer.cs">
+      <DependentUpon>lessons.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="login.aspx.cs">
+      <DependentUpon>login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="login.aspx.designer.cs">
+      <DependentUpon>login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="manager.aspx.cs">
+      <DependentUpon>manager.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="manager.aspx.designer.cs">
+      <DependentUpon>manager.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="signup.aspx.cs">
+      <DependentUpon>signup.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="signup.aspx.designer.cs">
+      <DependentUpon>signup.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="css\.DS_Store" />
+    <Content Include=".editorconfig" />
+    <Content Include="fonts\.DS_Store" />
+    <Content Include="fonts\Flaticon.eot" />
+    <Content Include="fonts\Flaticon.ttf" />
+    <Content Include="fonts\Flaticon.woff" />
+    <Content Include="fonts\Flaticon.woff2" />
+    <Content Include="fonts\themify.eot" />
+    <Content Include="fonts\themify.ttf" />
+    <Content Include="fonts\themify.woff" />
+    <Content Include="img\.DS_Store" />
+    <Content Include="img\banner\.DS_Store" />
+    <Content Include="img\features\.DS_Store" />
+    <Content Include="img\testimonials\.DS_Store" />
+    <Content Include="img\trainer\.DS_Store" />
+    <Content Include="login\fonts\material-icon\fonts\Material-Design-Iconic-Font.eot" />
+    <Content Include="login\fonts\material-icon\fonts\Material-Design-Iconic-Font.ttf" />
+    <Content Include="login\fonts\material-icon\fonts\Material-Design-Iconic-Font.woff" />
+    <Content Include="login\fonts\material-icon\fonts\Material-Design-Iconic-Font.woff2" />
+    <Content Include="login\fonts\poppins\poppins-v5-latin-300.eot" />
+    <Content Include="login\fonts\poppins\poppins-v5-latin-300.ttf" />
+    <Content Include="login\fonts\poppins\poppins-v5-latin-300.woff" />
+    <Content Include="login\fonts\poppins\poppins-v5-latin-300.woff2" />
+    <Content Include="login\fonts\poppins\poppins-v5-latin-300italic.eot" />
+    <Content Include="login\fonts\poppins\poppins-v5-latin-300italic.ttf" />
+    <Content Include="login\fonts\poppins\poppins-v5-latin-300italic.woff" />
+    <Content Include="login\fonts\poppins\poppins-v5-latin-300italic.woff2" />
+    <Content Include="login\fonts\poppins\poppins-v5-latin-500.eot" />
+    <Content Include="login\fonts\poppins\poppins-v5-latin-500.ttf" />
+    <Content Include="login\fonts\poppins\poppins-v5-latin-500.woff" />
+    <Content Include="login\fonts\poppins\poppins-v5-latin-500.woff2" />
+    <Content Include="login\fonts\poppins\poppins-v5-latin-500italic.eot" />
+    <Content Include="login\fonts\poppins\poppins-v5-latin-500italic.ttf" />
+    <Content Include="login\fonts\poppins\poppins-v5-latin-500italic.woff" />
+    <Content Include="login\fonts\poppins\poppins-v5-latin-500italic.woff2" />
+    <Content Include="login\fonts\poppins\poppins-v5-latin-600.eot" />
+    <Content Include="login\fonts\poppins\poppins-v5-latin-600.ttf" />
+    <Content Include="login\fonts\poppins\poppins-v5-latin-600.woff" />
+    <Content Include="login\fonts\poppins\poppins-v5-latin-600.woff2" />
+    <Content Include="login\fonts\poppins\poppins-v5-latin-700.eot" />
+    <Content Include="login\fonts\poppins\poppins-v5-latin-700.ttf" />
+    <Content Include="login\fonts\poppins\poppins-v5-latin-700.woff" />
+    <Content Include="login\fonts\poppins\poppins-v5-latin-700.woff2" />
+    <Content Include="login\fonts\poppins\poppins-v5-latin-700italic.eot" />
+    <Content Include="login\fonts\poppins\poppins-v5-latin-700italic.ttf" />
+    <Content Include="login\fonts\poppins\poppins-v5-latin-700italic.woff" />
+    <Content Include="login\fonts\poppins\poppins-v5-latin-700italic.woff2" />
+    <Content Include="login\fonts\poppins\poppins-v5-latin-800.eot" />
+    <Content Include="login\fonts\poppins\poppins-v5-latin-800.ttf" />
+    <Content Include="login\fonts\poppins\poppins-v5-latin-800.woff" />
+    <Content Include="login\fonts\poppins\poppins-v5-latin-800.woff2" />
+    <Content Include="login\fonts\poppins\poppins-v5-latin-800italic.eot" />
+    <Content Include="login\fonts\poppins\poppins-v5-latin-800italic.ttf" />
+    <Content Include="login\fonts\poppins\poppins-v5-latin-800italic.woff" />
+    <Content Include="login\fonts\poppins\poppins-v5-latin-800italic.woff2" />
+    <Content Include="login\fonts\poppins\poppins-v5-latin-900.eot" />
+    <Content Include="login\fonts\poppins\poppins-v5-latin-900.ttf" />
+    <Content Include="login\fonts\poppins\poppins-v5-latin-900.woff" />
+    <Content Include="login\fonts\poppins\poppins-v5-latin-900.woff2" />
+    <Content Include="login\fonts\poppins\poppins-v5-latin-italic.eot" />
+    <Content Include="login\fonts\poppins\poppins-v5-latin-italic.ttf" />
+    <Content Include="login\fonts\poppins\poppins-v5-latin-italic.woff" />
+    <Content Include="login\fonts\poppins\poppins-v5-latin-italic.woff2" />
+    <Content Include="login\fonts\poppins\poppins-v5-latin-regular.eot" />
+    <Content Include="login\fonts\poppins\poppins-v5-latin-regular.ttf" />
+    <Content Include="login\fonts\poppins\poppins-v5-latin-regular.woff" />
+    <Content Include="login\fonts\poppins\poppins-v5-latin-regular.woff2" />
+    <Content Include="login\fonts\poppins\roboto-condensed-v16-latin-700.eot" />
+    <Content Include="login\fonts\poppins\roboto-condensed-v16-latin-700.ttf" />
+    <Content Include="login\fonts\poppins\roboto-condensed-v16-latin-700.woff" />
+    <Content Include="login\fonts\poppins\roboto-condensed-v16-latin-700.woff2" />
+    <Content Include="login\fonts\poppins\roboto-condensed-v16-latin-700italic.eot" />
+    <Content Include="login\fonts\poppins\roboto-condensed-v16-latin-700italic.ttf" />
+    <Content Include="login\fonts\poppins\roboto-condensed-v16-latin-700italic.woff" />
+    <Content Include="login\fonts\poppins\roboto-condensed-v16-latin-700italic.woff2" />
+    <Content Include="login\fonts\poppins\roboto-condensed-v16-latin-italic.eot" />
+    <Content Include="login\fonts\poppins\roboto-condensed-v16-latin-italic.ttf" />
+    <Content Include="login\fonts\poppins\roboto-condensed-v16-latin-italic.woff" />
+    <Content Include="login\fonts\poppins\roboto-condensed-v16-latin-italic.woff2" />
+    <Content Include="login\fonts\poppins\roboto-condensed-v16-latin-regular.eot" />
+    <Content Include="login\fonts\poppins\roboto-condensed-v16-latin-regular.ttf" />
+    <Content Include="login\fonts\poppins\roboto-condensed-v16-latin-regular.woff" />
+    <Content Include="login\fonts\poppins\roboto-condensed-v16-latin-regular.woff2" />
+    <None Include="packages.config" />
+    <None Include="Properties\PublishProfiles\FolderProfile.pubxml" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="extract\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>46260</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>https://localhost:44386/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
