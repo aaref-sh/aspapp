@@ -1,4 +1,4 @@
-# aspapp
+# Kid-Edu
 a simple kids teaching website made in asp webform application 
 it contains a:
  - homepage
