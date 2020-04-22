@@ -8,4 +8,4 @@ it contains a:
  - page for manager to manager others accounts
  
       ===========================  
-by begginer skills 
+by beginner skills 
